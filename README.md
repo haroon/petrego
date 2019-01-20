@@ -1,5 +1,5 @@
 # Implementation of a flask-based RESTful API
-A flask-driven restful API for Bucketlist interactions
+A flask-driven restful API for PetRego pet registration service.
 
 
 ## Dependencies
