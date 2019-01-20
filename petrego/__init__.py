@@ -3,6 +3,7 @@ import os
 from flask import Flask
 from . import db, help
 from .apiv1 import APIV1
+from .apiv2 import APIV2
 from .jsonformatter import JSONFormatter
 from .sqlitehelper import SQLiteHelper
 
@@ -31,8 +32,10 @@ def create_app(test_config=None):
     db.init_app(app)
 
     # register blueprints
-    apiv1 = APIV1(SQLiteHelper(), JSONFormatter(), 'apiv1', __name__)
-    app.register_blueprint(apiv1)
+    app.register_blueprint(APIV1(SQLiteHelper(), JSONFormatter(),
+        'apiv1', __name__))
+    app.register_blueprint(APIV2(SQLiteHelper(), JSONFormatter(),
+        'apiv2', __name__))
     app.register_blueprint(help.bp)
 
     return app
