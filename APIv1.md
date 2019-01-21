@@ -1,5 +1,7 @@
 # Pet Registry
+
 ----
+
 ## Description
 
 This document descibes the REST API of the The PetRego pet registry service.
@@ -31,12 +33,14 @@ All *GET* responses will have the form
 All *POST* and *PUT* responses will have one of two forms depending on if the operation was successful or if an error occurred.
 
 **Error:**
+
 ```Relevant HTTP Error Code```
 
 **Success:**
 
 
 - ```HTTP Success Code```
+
 - ```json
 {
     "links": {
@@ -59,17 +63,18 @@ Record a new animal and food it eats.
 
 **Definition**
 
-`POST /animalfoods/<animal>/<food>/`
+```POST /animalfoods/<animal>/<food>/```
 
 **Arguments**
 
-- `"animal":string` The name of animal
-- `"food":string` The food it eats
+- ```"animal":string``` The name of animal
+- ```"food":string``` The food it eats
 
 **Response**
 
-- `201` on success
-```json
+- ```201``` on success
+
+- ```json
 {
     "links": [
         {
@@ -83,8 +88,10 @@ Record a new animal and food it eats.
             "type": "PUT"
         }
     ]
-}```
-- `422` if animal already exists
+}
+```
+
+- ```422``` if animal already exists
 
 ### Update an existing animal
 
@@ -94,16 +101,17 @@ Update the food for an existing animal.
 
 **Definition**
 
-`PUT /animalfoods/<animal>/<food>/`
+```PUT /animalfoods/<animal>/<food>/```
 
 **Arguments**
 
-- `"animal":string` The name of animal
-- `"food":string` The food it eats
+- ```"animal":string``` The name of animal
+- ```"food":string``` The food it eats
 
 **Response**
 
-- `201` on success
+- ```201``` on success
+
 - ```json
 {
     "links": {
@@ -113,7 +121,8 @@ Update the food for an existing animal.
     }
 }
 ```
-- `422` if an error occurred.
+
+- ```422``` if an error occurred.
 
 ### Get animal food
 
@@ -123,15 +132,16 @@ Get the food an animal eats.
 
 **Definition**
 
-`GET /animalfoods/<animal>/`
+```GET /animalfoods/<animal>/```
 
 **Arguments**
 
-- `"animal":string` The name of animal
+- ```"animal":string``` The name of animal
 
 **Response**
 
-- `200` on success
+- ```200``` on success
+
 - ```json
 {
     "data": [
@@ -151,11 +161,12 @@ Get a list of all animal.
 
 **Definition**
 
-`GET /animals/`
+```GET /animals/```
 
 **Response**
 
-- `200` on success
+- ```200``` on success
+
 - ```json
 {
     "data": [
@@ -174,17 +185,18 @@ Record a new owner's details.
 
 **Definition**
 
-`POST /owners/<first_name>/<last_name>/`
+```POST /owners/<first_name>/<last_name>/```
 
 **Arguments**
 
-- `"first_name":string` The first name of the owner
-- `"last_name":string` The last name of the owner
+- ```"first_name":string``` The first name of the owner
+- ```"last_name":string``` The last name of the owner
 
 **Response**
 
-- `201` on success
-```json
+- ```201``` on success
+
+- ```json
 {
     "links": [
         {
@@ -193,8 +205,10 @@ Record a new owner's details.
             "type": "GET"
         }
     ]
-}```
-- `422` if error occurred.
+}
+```
+
+- ```422``` if error occurred.
 
 ### Get all owners
 
@@ -204,11 +218,12 @@ Get a list of all owners.
 
 **Definition**
 
-`GET /owners/`
+```GET /owners/```
 
 **Response**
 
-- `200` on success
+- ```200``` on success
+
 - ```json
 {
     "data": [
@@ -228,19 +243,20 @@ Add a new pet for an owner.
 
 **Definition**
 
-`POST /pets/<pet_name>/<pet_type>/<first_name>/<last_name>/`
+```POST /pets/<pet_name>/<pet_type>/<first_name>/<last_name>/```
 
 **Arguments**
 
-- `"pet_name":string` The  name of the pet
-- `"pet_type":string` The animal type of the pet
-- `"first_name":string` The first name of the owner
-- `"last_name":string` The last name of the owner
+- ```"pet_name":string``` The  name of the pet
+- ```"pet_type":string``` The animal type of the pet
+- ```"first_name":string``` The first name of the owner
+- ```"last_name":string``` The last name of the owner
 
 **Response**
 
-- `201` on success
-```json
+- ```201``` on success
+
+- ```json
 {
     "links": [
         {
@@ -249,8 +265,10 @@ Add a new pet for an owner.
           "type": "GET"
         }
     ]
-}```
-- `422` if error occurred.
+}
+```
+
+- ```422``` if error occurred.
 
 ### Get all pets of an owner
 
@@ -260,16 +278,17 @@ Get a list of all pets of an owner.
 
 **Definition**
 
-`GET /pets/<first_name>/<last_name>/`
+```GET /pets/<first_name>/<last_name>/```
 
 **Arguments**
 
-- `"first_name":string` The first name of the owner
-- `"last_name":string` The last name of the owner
+- ```"first_name":string``` The first name of the owner
+- ```"last_name":string``` The last name of the owner
 
 **Response**
 
-- `200` on success
+- ```200``` on success
+
 - ```json
 {
     "data": [
@@ -283,7 +302,6 @@ Get a list of all pets of an owner.
 }
 ```
 
-
 ### Delete a pet
 
 **Description**
@@ -292,17 +310,18 @@ Delete a pet from an owner's pets list.
 
 **Definition**
 
-`DELETE /pets/<pet_name>/<first_name>/<last_name>/`
+```DELETE /pets/<pet_name>/<first_name>/<last_name>/```
 
 **Arguments**
 
-- `"pet_name":string` The  name of the pet
-- `"last_name":string` The last name of the owner
-- `"last_name":string` The last name of the owner
+- ```"pet_name":string``` The  name of the pet
+- ```"last_name":string``` The last name of the owner
+- ```"last_name":string``` The last name of the owner
 
 **Response**
 
-- `202` on success
+- ```202``` on success
+
 - ```json
 {
     "links": [
