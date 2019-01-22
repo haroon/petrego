@@ -59,6 +59,8 @@ class Tests(unittest.TestCase):
         result = json.loads(res.data.decode())['data']
         self.assertEqual(len(result), 1)
         self.assertEqual(result[0]['food'], 'rats')
+        
+        self.assertTrue(False)
 
     def test_pets(self):
         """Test pets endpoint.
