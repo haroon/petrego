@@ -80,5 +80,5 @@ A flask-driven restful API for PetRego pet registration service.
 * This app uses Python's *unittest* framework. You can test the application by running the following command:
 
     ```
-    $ python3 test_api_v1.py
+    $ python3 -m unittest discover tests
     ```
