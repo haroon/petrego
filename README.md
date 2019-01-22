@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.com/haroon/petrego.svg?branch=master)](https://travis-ci.com/haroon/petrego)
 # Implementation of a flask-based RESTful API
 A flask-driven restful API for PetRego pet registration service.
 
