@@ -60,8 +60,6 @@ class Tests(unittest.TestCase):
         self.assertEqual(len(result), 1)
         self.assertEqual(result[0]['food'], 'rats')
         
-        self.assertTrue(False)
-
     def test_pets(self):
         """Test pets endpoint.
         """
