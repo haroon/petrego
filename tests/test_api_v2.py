@@ -35,6 +35,10 @@ class Tests(unittest.TestCase):
         os.close(self.test_db)
         os.unlink(self.app.config['DATABASE'])
 
+    # @expectedFailure
+    def test_expected_failure(self):
+        self.assertTrue(False)
+
     def test_animalfood(self):
         """Test animalfoods end points.
         """
