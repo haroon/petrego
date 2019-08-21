@@ -8,6 +8,7 @@ import tempfile
 import unittest
 import json
 from petrego import create_app, db
+from unittest import expectedFailure
 
 
 class Tests(unittest.TestCase):
