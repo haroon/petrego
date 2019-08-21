@@ -36,7 +36,7 @@ class Tests(unittest.TestCase):
         os.close(self.test_db)
         os.unlink(self.app.config['DATABASE'])
 
-    # @expectedFailure
+    @expectedFailure
     def test_expected_failure(self):
         self.assertTrue(False)
 
