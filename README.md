@@ -2,6 +2,8 @@
 
 [![Build status](https://badge.buildkite.com/00bf675d0c0d8ec400a4f5b47e57d7bdc57a110a86eb0cad51.svg)](https://buildkite.com/haroon/testpipeline)
 
+[![Coverage Status](https://coveralls.io/repos/github/haroon/petrego/badge.svg?branch=master)](https://coveralls.io/github/haroon/petrego?branch=master)
+
 # Implementation of a flask-based RESTful API
 A flask-driven restful API for PetRego pet registration service.
 
